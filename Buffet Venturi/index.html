@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Buffet Venturi – Espaço sofisticado em Guarulhos para casamentos, aniversários, formaturas e eventos inesquecíveis. 4.7 ⭐ com mais de 1600 avaliações." />
+    <meta name="keywords"
+        content="buffet guarulhos, buffet casamento guarulhos, espaço para eventos guarulhos, buffet venturi, festas guarulhos" />
+    <meta property="og:title" content="Buffet Venturi – Eventos Inesquecíveis em Guarulhos" />
+    <meta property="og:description"
+        content="Realize o evento dos seus sonhos. Casamentos, aniversários, formaturas e muito mais." />
+    <title>Buffet Venturi – Eventos Inesquecíveis em Guarulhos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Josefin+Sans:wght@200;300;400&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* ─── RESET & ROOT ─────────────────────────────────────────────── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --gold: #C6963A;
+            --gold-light: #E2B96B;
+            --gold-pale: #F5E6C8;
+            --wine: #5C1A2A;
+            --wine-deep: #3D0F1C;
+            --wine-mid: #7A2236;
+            --cream: #FAF6EE;
+            --cream-dark: #F0E9D8;
+            --charcoal: #1C1C1C;
+            --text-mid: #4A3728;
+            --white: #FFFFFF;
+            --shadow-gold: 0 4px 30px rgba(198, 150, 58, 0.25);
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Josefin Sans', sans-serif;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--cream);
+            color: var(--charcoal);
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ─── SCROLLBAR ────────────────────────────────────────────────── */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--wine-deep);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 3px;
+        }
+
+        /* ─── UTILITY ──────────────────────────────────────────────────── */
+        .section-tag {
+            font-family: var(--font-sans);
+            font-size: 0.68rem;
+            font-weight: 300;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.15;
+        }
+
+        .ornament {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1.2rem auto;
+            opacity: 0.7;
+        }
+
+        .ornament::before,
+        .ornament::after {
+            content: '';
+            flex: 1;
+            max-width: 80px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold));
+        }
+
+        .ornament::after {
+            background: linear-gradient(270deg, transparent, var(--gold));
+        }
+
+        .ornament span {
+            font-size: 1rem;
+            color: var(--gold);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.85rem 2rem;
+            border-radius: 2px;
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(-110%);
+            transition: transform 0.35s ease;
+        }
+
+        .btn:hover::after {
+            transform: translateX(0);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--wine-deep);
+            box-shadow: 0 6px 20px rgba(198, 150, 58, 0.35);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(198, 150, 58, 0.45);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid rgba(198, 150, 58, 0.6);
+        }
+
+        .btn-outline:hover {
+            background: rgba(198, 150, 58, 0.12);
+            border-color: var(--gold);
+        }
+
+        .btn-wine {
+            background: linear-gradient(135deg, var(--wine), var(--wine-mid));
+            color: var(--gold-pale);
+            box-shadow: 0 6px 20px rgba(92, 26, 42, 0.35);
+        }
+
+        .btn-wine:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(92, 26, 42, 0.45);
+        }
+
+        /* ─── REVEAL ANIMATIONS ────────────────────────────────────────── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-left.visible,
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ─── NAVBAR ────────────────────────────────────────────────────── */
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.4rem 4%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.4s, padding 0.4s, box-shadow 0.4s;
+        }
+
+        #navbar.scrolled {
+            background: rgba(28, 10, 16, 0.97);
+            backdrop-filter: blur(12px);
+            padding: 0.85rem 4%;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-logo {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .nav-logo .logo-main {
+            font-family: var(--font-display);
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            letter-spacing: 0.05em;
+        }
+
+        .nav-logo .logo-sub {
+            font-family: var(--font-sans);
+            font-size: 0.58rem;
+            font-weight: 200;
+            letter-spacing: 0.35em;
+            color: rgba(226, 185, 107, 0.65);
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: var(--font-sans);
+            font-size: 0.67rem;
+            font-weight: 300;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.75);
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-light);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            font-family: var(--font-sans);
+            font-size: 0.67rem;
+            font-weight: 400;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--wine-deep) !important;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            padding: 0.55rem 1.3rem;
+            border-radius: 1px;
+            transition: transform 0.3s, box-shadow 0.3s !important;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-gold) !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: var(--gold-light);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        /* ─── HERO ──────────────────────────────────────────────────────── */
+        #hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(160deg, rgba(28, 10, 16, 0.88) 0%, rgba(92, 26, 42, 0.72) 50%, rgba(28, 10, 16, 0.92) 100%),
+                url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1800&q=85&auto=format') center/cover no-repeat;
+            transform: scale(1.05);
+            animation: heroZoom 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroZoom {
+            from {
+                transform: scale(1.05);
+            }
+
+            to {
+                transform: scale(1.12);
+            }
+        }
+
+        /* Ornamental border overlay */
+        .hero-frame {
+            position: absolute;
+            inset: 24px;
+            border: 1px solid rgba(198, 150, 58, 0.18);
+            pointer-events: none;
+        }
+
+        .hero-frame::before,
+        .hero-frame::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-color: var(--gold);
+            border-style: solid;
+            opacity: 0.55;
+        }
+
+        .hero-frame::before {
+            top: -1px;
+            left: -1px;
+            border-width: 2px 0 0 2px;
+        }
+
+        .hero-frame::after {
+            bottom: -1px;
+            right: -1px;
+            border-width: 0 2px 2px 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem 1rem;
+            max-width: 820px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(198, 150, 58, 0.12);
+            border: 1px solid rgba(198, 150, 58, 0.3);
+            padding: 0.4rem 1.2rem;
+            border-radius: 1px;
+            font-family: var(--font-sans);
+            font-size: 0.62rem;
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 1.8rem;
+            animation: fadeDown 1s ease 0.3s both;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.12;
+            margin-bottom: 1.4rem;
+            animation: fadeUp 1s ease 0.5s both;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .hero-sub {
+            font-family: var(--font-body);
+            font-size: clamp(1.05rem, 2vw, 1.3rem);
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.78);
+            max-width: 580px;
+            margin: 0 auto 2.4rem;
+            line-height: 1.7;
+            animation: fadeUp 1s ease 0.7s both;
+        }
+
+        .hero-stars {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2.4rem;
+            animation: fadeUp 1s ease 0.85s both;
+        }
+
+        .hero-stars .stars {
+            color: var(--gold-light);
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .hero-stars .rating-text {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeUp 1s ease 1s both;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            animation: fadeUp 1s ease 1.2s both;
+        }
+
+        .hero-scroll span {
+            font-family: var(--font-sans);
+            font-size: 0.58rem;
+            letter-spacing: 0.3em;
+            color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scaleY(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scaleY(1.1);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ─── STRIP ─────────────────────────────────────────────────────── */
+        .stats-strip {
+            background: linear-gradient(135deg, var(--wine-deep), var(--wine));
+            padding: 2.2rem 4%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem 3rem;
+            border-right: 1px solid rgba(198, 150, 58, 0.2);
+            text-align: center;
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-num {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-family: var(--font-sans);
+            font-size: 0.6rem;
+            font-weight: 200;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.55);
+            margin-top: 0.35rem;
+        }
+
+        /* ─── SECTION BASE ──────────────────────────────────────────────── */
+        section {
+            padding: 6rem 4%;
+        }
+
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        /* ─── SOBRE ─────────────────────────────────────────────────────── */
+        #sobre {
+            background: var(--cream);
+        }
+
+        .sobre-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .sobre-img-wrap {
+            position: relative;
+        }
+
+        .sobre-img-main {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: 1px;
+        }
+
+        .sobre-img-accent {
+            position: absolute;
+            bottom: -28px;
+            right: -28px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid var(--cream);
+            border-radius: 1px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .sobre-gold-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50%;
+            height: 40%;
+            border: 1px solid rgba(198, 150, 58, 0.35);
+            pointer-events: none;
+        }
+
+        .sobre-text .section-title {
+            font-size: clamp(2rem, 3.2vw, 2.8rem);
+            color: var(--wine-deep);
+            margin-bottom: 1.2rem;
+        }
+
+        .sobre-lead {
+            font-size: 1.18rem;
+            font-weight: 400;
+            color: var(--text-mid);
+            line-height: 1.75;
+            margin-bottom: 1.2rem;
+        }
+
+        .sobre-body {
+            font-size: 1.05rem;
+            color: #5A4A3A;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .sobre-pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .pillar {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 1rem 1.2rem;
+            background: var(--cream-dark);
+            border-left: 2px solid var(--gold);
+            border-radius: 1px;
+        }
+
+        .pillar-icon {
+            font-size: 1.2rem;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .pillar-title {
+            font-family: var(--font-sans);
+            font-size: 0.68rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--wine);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .pillar-desc {
+            font-size: 0.9rem;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+
+        /* ─── AVALIAÇÕES ────────────────────────────────────────────────── */
+        #avaliacoes {
+            background: linear-gradient(160deg, var(--wine-deep) 0%, var(--wine) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #avaliacoes::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C6963A' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+        }
+
+        #avaliacoes .section-title {
+            color: var(--white);
+        }
+
+        #avaliacoes .section-tag {
+            color: var(--gold-light);
+        }
+
+        .rating-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .rating-big-num {
+            font-family: var(--font-display);
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            line-height: 1;
+        }
+
+        .rating-stars-big {
+            font-size: 1.8rem;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            margin: 0.5rem 0;
+        }
+
+        .rating-count {
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
+            font-weight: 200;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .review-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(198, 150, 58, 0.2);
+            padding: 2rem;
+            border-radius: 2px;
+            position: relative;
+            transition: var(--transition);
+            backdrop-filter: blur(4px);
+        }
+
+        .review-card:hover {
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(198, 150, 58, 0.45);
+            transform: translateY(-4px);
+        }
+
+        .review-quote {
+            font-size: 3.5rem;
+            color: var(--gold);
+            opacity: 0.3;
+            line-height: 0.5;
+            font-family: Georgia, serif;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .review-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--wine-mid));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .review-name {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            color: var(--gold-light);
+            text-transform: uppercase;
+            display: block;
+        }
+
+        .review-stars-sm {
+            font-size: 0.75rem;
+            color: var(--gold);
+        }
+
+        .google-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-top: 3rem;
+            font-family: var(--font-sans);
+            font-size: 0.68rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+        }
+
+        .google-badge::before,
+        .google-badge::after {
+            content: '';
+            flex: 1;
+            max-width: 120px;
+            height: 1px;
+            background: rgba(198, 150, 58, 0.2);
+        }
+
+        /* ─── ESTRUTURA ─────────────────────────────────────────────────── */
+        #estrutura {
+            background: var(--cream-dark);
+        }
+
+        .estrutura-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .estrutura-card {
+            background: var(--white);
+            border: 1px solid rgba(198, 150, 58, 0.15);
+            padding: 2.2rem 1.8rem;
+            text-align: center;
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .estrutura-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .estrutura-card:hover {
+            box-shadow: 0 12px 40px rgba(92, 26, 42, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .estrutura-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .estrutura-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .estrutura-name {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--wine);
+            margin-bottom: 0.5rem;
+        }
+
+        .estrutura-desc {
+            font-size: 0.95rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+
+        /* ─── EVENTOS ────────────────────────────────────────────────────── */
+        #eventos {
+            background: var(--cream);
+        }
+
+        .eventos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .evento-card {
+            position: relative;
+            height: 320px;
+            overflow: hidden;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .evento-card.wide {
+            grid-column: span 2;
+        }
+
+        .evento-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.6s ease;
+        }
+
+        .evento-card:hover .evento-bg {
+            transform: scale(1.07);
+        }
+
+        .evento-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(28, 10, 16, 0.88) 0%, rgba(28, 10, 16, 0.2) 60%, transparent 100%);
+        }
+
+        .evento-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.8rem;
+        }
+
+        .evento-tag {
+            font-family: var(--font-sans);
+            font-size: 0.6rem;
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .evento-name {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+        }
+
+        /* ─── CARDÁPIO ──────────────────────────────────────────────────── */
+        #cardapio {
+            background: linear-gradient(160deg, var(--wine-deep), var(--wine));
+            position: relative;
+        }
+
+        #cardapio::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C6963A' fill-opacity='0.04'%3E%3Cpath d='M20 0L0 20 20 40 40 20z'/%3E%3C/g%3E%3C/svg%3E") repeat;
+            opacity: 0.5;
+        }
+
+        #cardapio .section-title {
+            color: var(--white);
+        }
+
+        #cardapio .section-tag {
+            color: var(--gold-light);
+        }
+
+        .cardapio-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .tab-btn {
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.6rem 1.5rem;
+            border: 1px solid rgba(198, 150, 58, 0.3);
+            background: transparent;
+            color: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            border-radius: 1px;
+            transition: var(--transition);
+        }
+
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--wine-deep);
+        }
+
+        .cardapio-panel {
+            display: none;
+        }
+
+        .cardapio-panel.active {
+            display: block;
+        }
+
+        .cardapio-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.2rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .cardapio-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(198, 150, 58, 0.15);
+            padding: 1.1rem 1.4rem;
+            border-radius: 1px;
+            transition: var(--transition);
+        }
+
+        .cardapio-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(198, 150, 58, 0.4);
+        }
+
+        .cardapio-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .cardapio-item span {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.4;
+        }
+
+        /* ─── INCLUSÃO ──────────────────────────────────────────────────── */
+        #inclusao {
+            background: var(--cream);
+        }
+
+        .inclusao-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .inclusao-text .section-title {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--wine-deep);
+            margin-bottom: 1.2rem;
+        }
+
+        .inclusao-text p {
+            font-size: 1.08rem;
+            color: var(--text-mid);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .inclusao-badges {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1.8rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.1rem;
+            border-radius: 50px;
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .badge-wine {
+            background: rgba(92, 26, 42, 0.1);
+            color: var(--wine);
+            border: 1px solid rgba(92, 26, 42, 0.2);
+        }
+
+        .badge-gold {
+            background: rgba(198, 150, 58, 0.12);
+            color: var(--gold);
+            border: 1px solid rgba(198, 150, 58, 0.3);
+        }
+
+        .badge-rainbow {
+            background: linear-gradient(135deg, rgba(255, 100, 100, 0.1), rgba(100, 100, 255, 0.1));
+            color: #7c4f9e;
+            border: 1px solid rgba(150, 100, 200, 0.25);
+        }
+
+        .inclusao-image {
+            position: relative;
+        }
+
+        .inclusao-img-main {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .inclusao-card {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: var(--wine);
+            padding: 1.4rem 1.8rem;
+            border-left: 3px solid var(--gold);
+            max-width: 240px;
+        }
+
+        .inclusao-card-num {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            line-height: 1;
+        }
+
+        .inclusao-card-text {
+            font-family: var(--font-sans);
+            font-size: 0.62rem;
+            font-weight: 200;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.55);
+            margin-top: 0.3rem;
+        }
+
+        /* ─── GALERIA ────────────────────────────────────────────────────── */
+        #galeria {
+            background: var(--cream-dark);
+            padding-bottom: 0;
+        }
+
+        #galeria .section-inner {
+            padding-bottom: 6rem;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 200px 200px;
+            gap: 8px;
+        }
+
+        .galeria-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .galeria-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .galeria-item:nth-child(4) {
+            grid-column: span 2;
+        }
+
+        .galeria-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .galeria-item:hover .galeria-img {
+            transform: scale(1.08);
+        }
+
+        .galeria-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(28, 10, 16, 0.5);
+            opacity: 0;
+            transition: opacity 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .galeria-item:hover .galeria-overlay {
+            opacity: 1;
+        }
+
+        .galeria-overlay span {
+            font-size: 1.8rem;
+            color: var(--gold-light);
+        }
+
+        .instagram-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 2.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--wine-deep), var(--wine));
+            color: var(--gold-light);
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
+            font-weight: 300;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: var(--transition);
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .instagram-link:hover {
+            background: linear-gradient(135deg, var(--wine), var(--wine-mid));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(92, 26, 42, 0.35);
+        }
+
+        /* ─── CONTATO ────────────────────────────────────────────────────── */
+        #contato {
+            background: var(--charcoal);
+            padding-bottom: 0;
+        }
+
+        #contato .section-tag {
+            color: var(--gold-light);
+        }
+
+        #contato .section-title {
+            color: var(--white);
+        }
+
+        #contato .ornament span {
+            color: var(--gold);
+        }
+
+        .contato-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            padding-bottom: 4rem;
+        }
+
+        .contato-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contato-block {
+            display: flex;
+            gap: 1.2rem;
+            align-items: flex-start;
+        }
+
+        .contato-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(198, 150, 58, 0.1);
+            border: 1px solid rgba(198, 150, 58, 0.25);
+            border-radius: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .contato-label {
+            font-family: var(--font-sans);
+            font-size: 0.62rem;
+            font-weight: 200;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        .contato-value {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+        }
+
+        .contato-ctas {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            margin-top: 1rem;
+        }
+
+        .map-wrap {
+            border-radius: 2px;
+            overflow: hidden;
+            border: 1px solid rgba(198, 150, 58, 0.2);
+        }
+
+        .map-wrap iframe {
+            display: block;
+            width: 100%;
+            height: 420px;
+            border: none;
+            filter: grayscale(30%) sepia(10%);
+        }
+
+        /* ─── FOOTER ─────────────────────────────────────────────────────── */
+        footer {
+            background: var(--wine-deep);
+            padding: 2rem 4%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-top: 1px solid rgba(198, 150, 58, 0.15);
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold-light);
+        }
+
+        .footer-copy {
+            font-family: var(--font-sans);
+            font-size: 0.62rem;
+            font-weight: 200;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            font-family: var(--font-sans);
+            font-size: 0.62rem;
+            font-weight: 200;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.35);
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+        }
+
+        /* ─── WHATSAPP FLOAT ─────────────────────────────────────────────── */
+        .wa-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 900;
+            width: 58px;
+            height: 58px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: waPulse 3s ease-in-out infinite;
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 32px rgba(37, 211, 102, 0.55);
+        }
+
+        .wa-float svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        @keyframes waPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45), 0 0 0 12px rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* ─── MOBILE NAV MENU ────────────────────────────────────────────── */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: rgba(20, 5, 12, 0.97);
+            backdrop-filter: blur(10px);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.75);
+            letter-spacing: 0.05em;
+            transition: color 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--gold-light);
+        }
+
+        .mobile-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--gold-light);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* ─── RESPONSIVE ─────────────────────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .sobre-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .sobre-img-wrap {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .estrutura-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .eventos-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .evento-card.wide {
+                grid-column: span 1;
+            }
+
+            .galeria-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .galeria-item:nth-child(4) {
+                grid-column: span 1;
+            }
+
+            .inclusao-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contato-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 5%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .stat-item {
+                padding: 0.5rem 1.5rem;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .estrutura-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .eventos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sobre-pillars {
+                grid-template-columns: 1fr;
+            }
+
+            .galeria-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 150px);
+            }
+
+            .galeria-item:nth-child(1) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contato-grid {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .estrutura-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-strip {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .stat-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(198, 150, 58, 0.2);
+                padding: 0.75rem 2rem;
+                width: 100%;
+            }
+
+            .stat-item:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════════════════════ -->
+    <nav id="navbar">
+        <a href="#hero" class="nav-logo">
+            <span class="logo-main">Buffet Venturi</span>
+            <span class="logo-sub">Guarulhos · Desde sempre</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#contato" class="nav-cta">Orçamento</a></li>
+        </ul>
+
+        <button class="hamburger" id="menuToggle" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="menuClose">✕</button>
+        <a href="#sobre" onclick="closeMobileMenu()">Sobre</a>
+        <a href="#avaliacoes" onclick="closeMobileMenu()">Avaliações</a>
+        <a href="#eventos" onclick="closeMobileMenu()">Eventos</a>
+        <a href="#cardapio" onclick="closeMobileMenu()">Cardápio</a>
+        <a href="#galeria" onclick="closeMobileMenu()">Galeria</a>
+        <a href="#contato" onclick="closeMobileMenu()">Contato</a>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════════ -->
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-frame"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                ✦ Guarulhos – SP &nbsp;|&nbsp; Eventos de alto padrão ✦
+            </div>
+
+            <h1 class="hero-title">
+                Realize o evento<br><em>dos seus sonhos</em><br>no Buffet Venturi
+            </h1>
+
+            <p class="hero-sub">
+                Um espaço sofisticado em Guarulhos para casamentos, aniversários,
+                formaturas e eventos verdadeiramente inesquecíveis.
+            </p>
+
+            <div class="hero-stars">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">4.7 · Mais de 1600 avaliações no Google</span>
+            </div>
+
+            <div class="hero-btns">
+                <a href="#contato" class="btn btn-gold">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+                    Solicitar orçamento
+                </a>
+                <a href="https://wa.me/5511947974234?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Buffet%20Venturi."
+                    target="_blank" class="btn btn-outline">
+                    <svg width="16" height="16" fill="#25D366" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <span>Explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     STATS STRIP
+═══════════════════════════════════════════════════════════════ -->
+    <div class="stats-strip">
+        <div class="stat-item reveal">
+            <span class="stat-num">4.7</span>
+            <span class="stat-label">Avaliação Google</span>
+        </div>
+        <div class="stat-item reveal">
+            <span class="stat-num">1600+</span>
+            <span class="stat-label">Avaliações</span>
+        </div>
+        <div class="stat-item reveal">
+            <span class="stat-num">5★</span>
+            <span class="stat-label">Atendimento</span>
+        </div>
+        <div class="stat-item reveal">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Personalizado</span>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     SOBRE
+═══════════════════════════════════════════════════════════════ -->
+    <section id="sobre">
+        <div class="section-inner">
+            <div class="sobre-grid">
+                <div class="sobre-img-wrap reveal-left">
+                    <img class="sobre-img-main"
+                        src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=85&auto=format"
+                        alt="Salão elegante do Buffet Venturi" loading="lazy" />
+                    <img class="sobre-img-accent"
+                        src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&q=85&auto=format"
+                        alt="Gastronomia de alta qualidade" loading="lazy" />
+                    <div class="sobre-gold-frame"></div>
+                </div>
+
+                <div class="sobre-text reveal-right">
+                    <span class="section-tag">Sobre Nós</span>
+                    <h2 class="section-title"
+                        style="font-size:clamp(2rem,3.2vw,2.8rem);color:var(--wine-deep);margin-bottom:1.2rem;">
+                        Um espaço à altura<br><em>de cada momento único</em>
+                    </h2>
+                    <div class="ornament" style="justify-content:flex-start;margin-left:0;"><span>✦</span></div>
+
+                    <p class="sobre-lead">
+                        O Buffet Venturi é referência em eventos de alto padrão na região de Guarulhos.
+                        Com mais de 1.600 avaliações e nota 4.7 no Google, nosso espaço já transformou
+                        centenas de sonhos em memórias eternas.
+                    </p>
+                    <p class="sobre-body">
+                        Localizado na Rua Piracicaba, 79 – Vila Augusta, nosso buffet oferece uma
+                        estrutura completa para casamentos, aniversários, formaturas, festas de debutantes
+                        e eventos corporativos. Cada detalhe é cuidadosamente planejado para que você e
+                        seus convidados vivam uma experiência verdadeiramente especial.
+                    </p>
+
+                    <div class="sobre-pillars">
+                        <div class="pillar">
+                            <div class="pillar-icon">🏛</div>
+                            <div>
+                                <span class="pillar-title">Ambiente Elegante</span>
+                                <span class="pillar-desc">Salão sofisticado com decoração refinada para todos os tipos
+                                    de festa.</span>
+                            </div>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon">👑</div>
+                            <div>
+                                <span class="pillar-title">Equipe Profissional</span>
+                                <span class="pillar-desc">Time especializado e dedicado para garantir cada detalhe do
+                                    seu evento.</span>
+                            </div>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon">✨</div>
+                            <div>
+                                <span class="pillar-title">Organização Impecável</span>
+                                <span class="pillar-desc">Planejamento completo do início ao fim para um evento sem
+                                    imprevistos.</span>
+                            </div>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon">💬</div>
+                            <div>
+                                <span class="pillar-title">Atendimento Personalizado</span>
+                                <span class="pillar-desc">Cada evento é único. Adaptamos tudo ao seu gosto e
+                                    necessidade.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     AVALIAÇÕES
+═══════════════════════════════════════════════════════════════ -->
+    <section id="avaliacoes">
+        <div class="section-inner" style="position:relative;z-index:1;">
+            <div class="section-header">
+                <span class="section-tag">O que dizem nossos clientes</span>
+                <h2 class="section-title reveal" style="font-size:clamp(2rem,3.5vw,3rem);">
+                    Cada evento, uma história<br>de amor e gratidão
+                </h2>
+                <div class="ornament reveal"><span>✦</span></div>
+
+                <div class="rating-hero reveal">
+                    <div class="rating-big-num">4.7</div>
+                    <div class="rating-stars-big">★★★★★</div>
+                    <div class="rating-count">Mais de 1.600 avaliações verificadas no Google</div>
+                </div>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card reveal">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">
+                        Um espaço acima da média em sua região, local lindo, limpo e muito bem cuidado.
+                        A comida é deliciosa e os profissionais são muito educados.
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">M</div>
+                        <div>
+                            <span class="review-name">Maria Fernanda</span>
+                            <span class="review-stars-sm">★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card reveal" style="transition-delay:0.15s">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">
+                        Festa impecável, comida maravilhosa e atenção sem palavras.
+                        Pensaram em cada detalhe para tornar o momento perfeito.
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">A</div>
+                        <div>
+                            <span class="review-name">Ana Carolina</span>
+                            <span class="review-stars-sm">★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card reveal" style="transition-delay:0.3s">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">
+                        Equipe nota 1000, ótimo serviço e comida maravilhosa.
+                        Superou todas as minhas expectativas. Recomendo muito!
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">R</div>
+                        <div>
+                            <span class="review-name">Roberto Lima</span>
+                            <span class="review-stars-sm">★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="google-badge reveal">Avaliações verificadas pelo Google</div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     ESTRUTURA
+═══════════════════════════════════════════════════════════════ -->
+    <section id="estrutura">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-tag">Infraestrutura completa</span>
+                <h2 class="section-title reveal" style="font-size:clamp(2rem,3.5vw,3rem);color:var(--wine-deep);">
+                    Tudo que você precisa<br>para um evento perfeito
+                </h2>
+                <div class="ornament reveal"><span>✦</span></div>
+            </div>
+
+            <div class="estrutura-grid">
+                <div class="estrutura-card reveal">
+                    <div class="estrutura-icon">♿</div>
+                    <div class="estrutura-name">Acessibilidade Total</div>
+                    <p class="estrutura-desc">Entrada, banheiro e assentos adaptados para cadeirantes e PCD.</p>
+                </div>
+                <div class="estrutura-card reveal" style="transition-delay:0.1s">
+                    <div class="estrutura-icon">🚗</div>
+                    <div class="estrutura-name">Estacionamento</div>
+                    <p class="estrutura-desc">Vagas cobertas e descobertas para conforto de todos os convidados.</p>
+                </div>
+                <div class="estrutura-card reveal" style="transition-delay:0.2s">
+                    <div class="estrutura-icon">🏛</div>
+                    <div class="estrutura-name">Espaço Amplo</div>
+                    <p class="estrutura-desc">Salão espaçoso para acomodar confortavelmente todos os seus convidados.
+                    </p>
+                </div>
+                <div class="estrutura-card reveal" style="transition-delay:0.3s">
+                    <div class="estrutura-icon">🎪</div>
+                    <div class="estrutura-name">Área para Crianças</div>
+                    <p class="estrutura-desc">Espaço dedicado para que os pequenos se divirtam com segurança.</p>
+                </div>
+                <div class="estrutura-card reveal" style="transition-delay:0.4s">
+                    <div class="estrutura-icon">🛁</div>
+                    <div class="estrutura-name">Banheiros Adaptados</div>
+                    <p class="estrutura-desc">Sanitários acessíveis e bem cuidados para o conforto de todos.</p>
+                </div>
+                <div class="estrutura-card reveal" style="transition-delay:0.5s">
+                    <div class="estrutura-icon">🌟</div>
+                    <div class="estrutura-name">Decoração Premium</div>
+                    <p class="estrutura-desc">Ambiente sofisticado que combina com qualquer tema de evento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     EVENTOS
+═══════════════════════════════════════════════════════════════ -->
+    <section id="eventos">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-tag">Especialidades</span>
+                <h2 class="section-title reveal" style="font-size:clamp(2rem,3.5vw,3rem);color:var(--wine-deep);">
+                    Eventos realizados com<br><em>excelência e paixão</em>
+                </h2>
+                <div class="ornament reveal"><span>✦</span></div>
+            </div>
+
+            <div class="eventos-grid">
+                <div class="evento-card wide reveal">
+                    <div class="evento-bg"
+                        style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=85&auto=format')">
+                    </div>
+                    <div class="evento-overlay"></div>
+                    <div class="evento-content">
+                        <span class="evento-tag">Para sempre juntos</span>
+                        <h3 class="evento-name">Casamentos</h3>
+                    </div>
+                </div>
+
+                <div class="evento-card reveal" style="transition-delay:0.1s">
+                    <div class="evento-bg"
+                        style="background-image:url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=85&auto=format')">
+                    </div>
+                    <div class="evento-overlay"></div>
+                    <div class="evento-content">
+                        <span class="evento-tag">Uma noite especial</span>
+                        <h3 class="evento-name">Festas de 15 Anos</h3>
+                    </div>
+                </div>
+
+                <div class="evento-card reveal" style="transition-delay:0.15s">
+                    <div class="evento-bg"
+                        style="background-image:url('https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=85&auto=format')">
+                    </div>
+                    <div class="evento-overlay"></div>
+                    <div class="evento-content">
+                        <span class="evento-tag">Comemore cada ano</span>
+                        <h3 class="evento-name">Aniversários</h3>
+                    </div>
+                </div>
+
+                <div class="evento-card reveal" style="transition-delay:0.2s">
+                    <div class="evento-bg"
+                        style="background-image:url('https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=85&auto=format')">
+                    </div>
+                    <div class="evento-overlay"></div>
+                    <div class="evento-content">
+                        <span class="evento-tag">Networking & Negócios</span>
+                        <h3 class="evento-name">Eventos Corporativos</h3>
+                    </div>
+                </div>
+
+                <div class="evento-card reveal" style="transition-delay:0.25s">
+                    <div class="evento-bg"
+                        style="background-image:url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=85&auto=format')">
+                    </div>
+                    <div class="evento-overlay"></div>
+                    <div class="evento-content">
+                        <span class="evento-tag">Conquista & Celebração</span>
+                        <h3 class="evento-name">Formaturas</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     CARDÁPIO
+═══════════════════════════════════════════════════════════════ -->
+    <section id="cardapio">
+        <div class="section-inner" style="position:relative;z-index:1;">
+            <div class="section-header">
+                <span class="section-tag">Gastronomia de excelência</span>
+                <h2 class="section-title reveal" style="font-size:clamp(2rem,3.5vw,3rem);">
+                    Um cardápio pensado<br><em>para encantar</em>
+                </h2>
+                <div class="ornament reveal"><span>✦</span></div>
+            </div>
+
+            <div class="cardapio-tabs reveal">
+                <button class="tab-btn active" onclick="showTab('entradas')">Entradas</button>
+                <button class="tab-btn" onclick="showTab('principal')">Prato Principal</button>
+                <button class="tab-btn" onclick="showTab('bebidas')">Bebidas</button>
+                <button class="tab-btn" onclick="showTab('drinks')">Drinks</button>
+                <button class="tab-btn" onclick="showTab('sobremesas')">Sobremesas</button>
+            </div>
+
+            <div id="tab-entradas" class="cardapio-panel active reveal">
+                <div class="cardapio-list">
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Salada tropical com croutons amanteigados</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Salgados assados e fritos</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Finger food: salpicão de frango</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Penne na manteiga com queijo</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Escondidinho de frango com catupiry</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Escondidinho de carne</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Cuscuz cremoso</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Fricassê de frango</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Strogonoff de carne</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-principal" class="cardapio-panel">
+                <div class="cardapio-list">
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Lagarto ao molho com champignon e arroz branco</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Conchiglione de frango com requeijão ao molho ao
+                            sugo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-bebidas" class="cardapio-panel">
+                <div class="cardapio-list">
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Água sem gás</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Refrigerante normal e diet</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Suco de uva</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Suco de maracujá</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Cerveja</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-drinks" class="cardapio-panel">
+                <div class="cardapio-list">
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Drink de Coco</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Espanhola</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Maracujá</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Frutas Tropicais</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Lagoa Azul</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Meia de Seda</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Whisky</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Gin</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Biarritz Spritz</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-sobremesas" class="cardapio-panel">
+                <div class="cardapio-list">
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Bolo mousse de chocolate com mousse de maracujá</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Gelado com morangos</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <div class="cardapio-dot"></div><span>Doces finos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     INCLUSÃO
+═══════════════════════════════════════════════════════════════ -->
+    <section id="inclusao">
+        <div class="section-inner">
+            <div class="inclusao-inner">
+                <div class="inclusao-text reveal-left">
+                    <span class="section-tag">Nosso compromisso</span>
+                    <h2 class="section-title"
+                        style="font-size:clamp(1.8rem,3vw,2.6rem);color:var(--wine-deep);margin-bottom:1.2rem;">
+                        Um espaço acolhedor<br><em>para todos</em>
+                    </h2>
+                    <div class="ornament" style="justify-content:flex-start;margin-left:0;"><span>✦</span></div>
+
+                    <p>
+                        O Buffet Venturi é liderado por empreendedoras que acreditam que cada pessoa
+                        merece celebrar seus momentos mais importantes com dignidade, respeito e alegria.
+                    </p>
+                    <p>
+                        Nosso espaço é um ambiente acolhedor e seguro para todos, incluindo a comunidade
+                        LGBTQ+ e pessoas transgênero. Acreditamos que o amor não tem limites e que toda
+                        celebração merece ser honrada com o mesmo carinho e profissionalismo.
+                    </p>
+                    <p>
+                        Venha como você é. Seja bem-vindo ao Buffet Venturi — um lugar onde toda história
+                        merece ser contada com elegância.
+                    </p>
+
+                    <div class="inclusao-badges">
+                        <span class="badge badge-wine">♀ Liderado por mulheres</span>
+                        <span class="badge badge-rainbow">🏳‍🌈 Espaço LGBTQ+ friendly</span>
+                        <span class="badge badge-gold">✦ Espaço seguro trans</span>
+                    </div>
+                </div>
+
+                <div class="inclusao-image reveal-right">
+                    <img class="inclusao-img-main"
+                        src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=700&q=85&auto=format"
+                        alt="Celebração no Buffet Venturi" loading="lazy" />
+                    <div class="inclusao-card">
+                        <div class="inclusao-card-num">100%</div>
+                        <div class="inclusao-card-text">Acolhimento & respeito para todos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     GALERIA
+═══════════════════════════════════════════════════════════════ -->
+    <section id="galeria">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-tag">Galeria de momentos</span>
+                <h2 class="section-title reveal" style="font-size:clamp(2rem,3.5vw,3rem);color:var(--wine-deep);">
+                    Cada foto conta uma<br><em>história inesquecível</em>
+                </h2>
+                <div class="ornament reveal"><span>✦</span></div>
+            </div>
+
+            <div class="galeria-grid reveal">
+                <div class="galeria-item">
+                    <img class="galeria-img"
+                        src="https://images.unsplash.com/photo-1519741497674-611481863552?w=700&q=80&auto=format"
+                        alt="Casamento" loading="lazy" />
+                    <div class="galeria-overlay"><span>✦</span></div>
+                </div>
+                <div class="galeria-item">
+                    <img class="galeria-img"
+                        src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=500&q=80&auto=format"
+                        alt="Gastronomia" loading="lazy" />
+                    <div class="galeria-overlay"><span>✦</span></div>
+                </div>
+                <div class="galeria-item">
+                    <img class="galeria-img"
+                        src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&q=80&auto=format"
+                        alt="Festa 15 anos" loading="lazy" />
+                    <div class="galeria-overlay"><span>✦</span></div>
+                </div>
+                <div class="galeria-item">
+                    <img class="galeria-img"
+                        src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=700&q=80&auto=format"
+                        alt="Salão decorado" loading="lazy" />
+                    <div class="galeria-overlay"><span>✦</span></div>
+                </div>
+                <div class="galeria-item">
+                    <img class="galeria-img"
+                        src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&q=80&auto=format"
+                        alt="Prato gourmet" loading="lazy" />
+                    <div class="galeria-overlay"><span>✦</span></div>
+                </div>
+                <div class="galeria-item">
+                    <img class="galeria-img"
+                        src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=500&q=80&auto=format"
+                        alt="Drinks" loading="lazy" />
+                    <div class="galeria-overlay"><span>✦</span></div>
+                </div>
+            </div>
+
+            <a href="https://www.instagram.com/buffetventuri/" target="_blank" class="instagram-link reveal">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+                Ver mais no Instagram @buffetventuri
+            </a>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     CONTATO
+═══════════════════════════════════════════════════════════════ -->
+    <section id="contato">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-tag">Fale conosco</span>
+                <h2 class="section-title reveal" style="font-size:clamp(2rem,3.5vw,3rem);">
+                    Vamos planejar<br><em>seu evento juntos?</em>
+                </h2>
+                <div class="ornament reveal"><span>✦</span></div>
+            </div>
+
+            <div class="contato-grid">
+                <div class="contato-info reveal-left">
+                    <div class="contato-block">
+                        <div class="contato-icon">📍</div>
+                        <div>
+                            <span class="contato-label">Endereço</span>
+                            <span class="contato-value">Rua Piracicaba, 79<br>Vila Augusta – Guarulhos, SP</span>
+                        </div>
+                    </div>
+
+                    <div class="contato-block">
+                        <div class="contato-icon">📞</div>
+                        <div>
+                            <span class="contato-label">Telefone / WhatsApp</span>
+                            <span class="contato-value">(11) 94797-4234</span>
+                        </div>
+                    </div>
+
+                    <div class="contato-block">
+                        <div class="contato-icon">⭐</div>
+                        <div>
+                            <span class="contato-label">Avaliação Google</span>
+                            <span class="contato-value" style="color:var(--gold);">4.7 ★★★★★<br><span
+                                    style="color:rgba(255,255,255,0.5);font-size:0.9rem;">Mais de 1.600
+                                    avaliações</span></span>
+                        </div>
+                    </div>
+
+                    <div class="contato-ctas">
+                        <a href="https://wa.me/5511947974234?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20o%20Buffet%20Venturi."
+                            target="_blank" class="btn btn-gold" style="justify-content:center;">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                            Solicitar orçamento pelo WhatsApp
+                        </a>
+                        <a href="tel:+5511947974234" class="btn btn-wine" style="justify-content:center;">
+                            📞 &nbsp; Ligar agora: (11) 94797-4234
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-wrap reveal-right">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.2764055!2d-46.5230!3d-23.4590!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef4e2e2e2e2e3%3A0x0!2sRua%20Piracicaba%2C%2079%20-%20Vila%20Augusta%2C%20Guarulhos%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Localização do Buffet Venturi"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════════ -->
+    <footer>
+        <div class="footer-logo">Buffet Venturi</div>
+        <p class="footer-copy">
+            © 2025 Buffet Venturi · Rua Piracicaba, 79, Vila Augusta – Guarulhos, SP
+        </p>
+        <div class="footer-links">
+            <a href="#sobre">Sobre</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#contato">Contato</a>
+            <a href="https://www.instagram.com/buffetventuri/" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     WHATSAPP FLOAT
+═══════════════════════════════════════════════════════════════ -->
+    <a href="https://wa.me/5511947974234?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Buffet%20Venturi."
+        target="_blank" class="wa-float" aria-label="WhatsApp Buffet Venturi" title="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="white">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <!-- ══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════════ -->
+    <script>
+        /* ── Navbar scroll effect ── */
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        /* ── Mobile menu ── */
+        document.getElementById('menuToggle').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+        document.getElementById('menuClose').addEventListener('click', closeMobileMenu);
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        /* ── Scroll reveal ── */
+        const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((e, i) => {
+                if (e.isIntersecting) {
+                    setTimeout(() => e.target.classList.add('visible'), i * 30);
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => observer.observe(el));
+
+        /* ── Cardápio tabs ── */
+        function showTab(id) {
+            document.querySelectorAll('.cardapio-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + id).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        /* ── Counter animation ── */
+        function animateCount(el, target, suffix = '', decimals = 0) {
+            const duration = 1800;
+            const start = performance.now();
+            const update = (now) => {
+                const t = Math.min((now - start) / duration, 1);
+                const ease = 1 - Math.pow(1 - t, 3);
+                const val = ease * target;
+                el.textContent = decimals ? val.toFixed(decimals) + suffix : Math.floor(val) + suffix;
+                if (t < 1) requestAnimationFrame(update);
+            };
+            requestAnimationFrame(update);
+        }
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const nums = e.target.querySelectorAll('.stat-num');
+                    nums.forEach(n => {
+                        const text = n.textContent;
+                        if (text.includes('4.7')) animateCount(n, 4.7, '', 1);
+                        else if (text.includes('1600')) animateCount(n, 1600, '+');
+                        else if (text.includes('5')) { /* keep star */ }
+                        else if (text.includes('100')) animateCount(n, 100, '%');
+                    });
+                    counterObserver.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const strip = document.querySelector('.stats-strip');
+        if (strip) counterObserver.observe(strip);
+
+        /* ── Smooth active link ── */
+        const sections = document.querySelectorAll('section[id]');
+        const navAnchors = document.querySelectorAll('.nav-links a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                if (window.scrollY >= s.offsetTop - 120) current = s.id;
+            });
+            navAnchors.forEach(a => {
+                a.style.color = a.getAttribute('href') === '#' + current
+                    ? 'var(--gold-light)'
+                    : 'rgba(255,255,255,0.75)';
+            });
+        }, { passive: true });
+    </script>
+</body>
+
+</html>
