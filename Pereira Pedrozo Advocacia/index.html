@@ -1037,7 +1037,23 @@
             gap: 5rem;
         }
 
-        .contato-info {}
+
+        .contato-info {
+            padding: 8rem 0;
+        }
+
+        @media (max-width: 1024px) {
+            .contato-inner {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+                padding: 0 2rem;
+            }
+
+            .contato-info {
+                padding: 4rem 0 0;
+            }
+        }
+
 
         .contato-info .section-title {
             margin-bottom: 2rem;
@@ -1172,6 +1188,8 @@
             outline: none;
             transition: border-color 0.3s, background 0.3s;
             -webkit-appearance: none;
+            appearance: none;
+
         }
 
         .field input:focus,
