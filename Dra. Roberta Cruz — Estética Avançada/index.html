@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Roberta Cruz — Estética Avançada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --gold: #B8975A;
+            --gold-light: #D4AF7A;
+            --gold-pale: #F0E6D3;
+            --rose: #F2E4E4;
+            --rose-mid: #E5CECE;
+            --rose-deep: #C4A0A0;
+            --white: #FDFBF9;
+            --off-white: #F7F2EE;
+            --text-dark: #2A1F1F;
+            --text-mid: #6B5555;
+            --text-light: #9A8585;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            font-weight: 300;
+            overflow-x: hidden;
+        }
+
+        /* ─── NAV ─── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.4rem 5vw;
+            background: rgba(253, 251, 249, 0.92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(184, 151, 90, 0.15);
+        }
+
+        .nav-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            color: var(--text-dark);
+        }
+
+        .nav-logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-mid);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            font-size: 0.7rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 0.65rem 1.6rem;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        /* ─── HERO ─── */
+        #hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 80px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 6rem 4rem 6rem 8vw;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.6rem, 4vw, 4.2rem);
+            font-weight: 300;
+            line-height: 1.18;
+            letter-spacing: -0.01em;
+            color: var(--text-dark);
+            margin-bottom: 1.6rem;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-subtitle {
+            font-size: 0.95rem;
+            font-weight: 300;
+            line-height: 1.9;
+            color: var(--text-mid);
+            max-width: 440px;
+            margin-bottom: 3rem;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--gold);
+            color: var(--white);
+            padding: 1rem 2.2rem;
+            text-decoration: none;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            transition: all 0.35s;
+            width: fit-content;
+        }
+
+        .btn-whatsapp:hover {
+            background: #9E7D43;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(184, 151, 90, 0.3);
+        }
+
+        .btn-whatsapp svg {
+            flex-shrink: 0;
+        }
+
+        .hero-metrics {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3.5rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--rose-mid);
+        }
+
+        .metric-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--gold);
+        }
+
+        .metric-label {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            text-transform: uppercase;
+            margin-top: 0.2rem;
+        }
+
+        .hero-right {
+            position: relative;
+            overflow: hidden;
+            background: var(--rose);
+        }
+
+        .hero-right::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 122, 0.12) 0%, rgba(196, 160, 160, 0.08) 100%);
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1.5rem;
+            background: linear-gradient(160deg, #F2E4E4 0%, #E8D5D5 40%, #F0E6D3 100%);
+            position: relative;
+        }
+
+        .hero-ornament {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 380px;
+            height: 380px;
+            border: 1px solid rgba(184, 151, 90, 0.25);
+            border-radius: 50%;
+        }
+
+        .hero-ornament::after {
+            content: '';
+            position: absolute;
+            inset: 20px;
+            border: 1px solid rgba(184, 151, 90, 0.15);
+            border-radius: 50%;
+        }
+
+        .hero-face-icon {
+            position: relative;
+            z-index: 2;
+            font-size: 8rem;
+            opacity: 0.45;
+            filter: drop-shadow(0 8px 24px rgba(196, 160, 160, 0.3));
+            line-height: 1;
+        }
+
+        .hero-image-label {
+            position: relative;
+            z-index: 2;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--rose-deep);
+            letter-spacing: 0.06em;
+        }
+
+        /* ─── DIVIDER ─── */
+        .gold-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+
+        .gold-divider::before,
+        .gold-divider::after {
+            content: '';
+            flex: 1;
+            max-width: 120px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold));
+        }
+
+        .gold-divider::after {
+            background: linear-gradient(to left, transparent, var(--gold));
+        }
+
+        .gold-divider-icon {
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 0.3em;
+        }
+
+        /* ─── SECTION BASE ─── */
+        section {
+            padding: 7rem 8vw;
+        }
+
+        .section-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .section-label::before {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 3.2vw, 3.2rem);
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--text-dark);
+        }
+
+        .section-title em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        /* ─── SOBRE ─── */
+        #sobre {
+            background: var(--off-white);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .sobre-visual {
+            position: relative;
+        }
+
+        .sobre-card {
+            background: var(--white);
+            border: 1px solid var(--rose-mid);
+            padding: 3.5rem;
+            position: relative;
+        }
+
+        .sobre-card::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: -12px;
+            bottom: -12px;
+            border: 1px solid var(--gold-pale);
+            z-index: -1;
+        }
+
+        .sobre-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--gold-pale);
+            padding: 0.5rem 1.2rem;
+            font-size: 0.68rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+
+        .sobre-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .sobre-role {
+            font-size: 0.75rem;
+            letter-spacing: 0.14em;
+            color: var(--text-light);
+            text-transform: uppercase;
+            margin-bottom: 1.8rem;
+            padding-bottom: 1.8rem;
+            border-bottom: 1px solid var(--rose-mid);
+        }
+
+        .sobre-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--rose-mid), var(--gold-pale));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sobre-stars {
+            color: var(--gold);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .sobre-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+        }
+
+        .sobre-content .section-title {
+            margin-bottom: 1.8rem;
+        }
+
+        .sobre-text {
+            font-size: 0.95rem;
+            line-height: 2;
+            color: var(--text-mid);
+            margin-bottom: 1.4rem;
+        }
+
+        .sobre-credentials {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-top: 2.5rem;
+        }
+
+        .credential {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.82rem;
+            color: var(--text-mid);
+        }
+
+        .credential-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        /* ─── PROCEDIMENTOS ─── */
+        #procedimentos {
+            background: var(--white);
+        }
+
+        .proc-header {
+            text-align: center;
+            margin-bottom: 4.5rem;
+        }
+
+        .proc-header .section-label {
+            justify-content: center;
+        }
+
+        .proc-header .section-label::before {
+            display: none;
+        }
+
+        .proc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5px;
+            background: var(--rose-mid);
+        }
+
+        .proc-card {
+            background: var(--white);
+            padding: 3rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s;
+            cursor: default;
+        }
+
+        .proc-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--gold), var(--gold-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+        }
+
+        .proc-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .proc-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(184, 151, 90, 0.1);
+        }
+
+        .proc-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 1;
+            color: var(--rose-mid);
+            margin-bottom: 1.5rem;
+            transition: color 0.4s;
+        }
+
+        .proc-card:hover .proc-number {
+            color: var(--gold-pale);
+        }
+
+        .proc-icon {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .proc-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .proc-desc {
+            font-size: 0.82rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        /* ─── BENEFÍCIOS ─── */
+        #beneficios {
+            background: linear-gradient(135deg, #2A1F1F 0%, #3D2B2B 100%);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .beneficios-left .section-label {
+            color: var(--gold-light);
+        }
+
+        .beneficios-left .section-label::before {
+            background: var(--gold-light);
+        }
+
+        .beneficios-left .section-title {
+            color: var(--white);
+        }
+
+        .beneficios-text {
+            font-size: 0.95rem;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.55);
+            margin-top: 1.5rem;
+        }
+
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .beneficio-item {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(184, 151, 90, 0.2);
+            padding: 2rem 1.8rem;
+            transition: all 0.35s;
+        }
+
+        .beneficio-item:hover {
+            background: rgba(184, 151, 90, 0.08);
+            border-color: rgba(184, 151, 90, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .beneficio-check {
+            width: 32px;
+            height: 32px;
+            border: 1px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .beneficio-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 0.4rem;
+        }
+
+        .beneficio-desc {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.7;
+        }
+
+        /* ─── AVALIAÇÕES ─── */
+        #avaliacoes {
+            background: var(--off-white);
+            text-align: center;
+        }
+
+        .aval-header {
+            margin-bottom: 4rem;
+        }
+
+        .aval-header .section-label {
+            justify-content: center;
+        }
+
+        .aval-header .section-label::before {
+            display: none;
+        }
+
+        .aval-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .aval-card {
+            background: var(--white);
+            border: 1px solid var(--rose-mid);
+            padding: 2.8rem;
+            position: relative;
+            text-align: left;
+            transition: all 0.35s;
+        }
+
+        .aval-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(196, 160, 160, 0.15);
+        }
+
+        .aval-quote-mark {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            line-height: 0.8;
+            color: var(--gold-pale);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .aval-stars {
+            color: var(--gold);
+            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+        }
+
+        .aval-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 1.8rem;
+        }
+
+        .aval-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--rose-mid);
+        }
+
+        .aval-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--rose-mid), var(--gold-pale));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .aval-name {
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: var(--text-mid);
+            font-weight: 400;
+        }
+
+        .aval-verified {
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        /* ─── CONTATO ─── */
+        #contato {
+            background: var(--white);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .contato-info .section-title {
+            margin-bottom: 2rem;
+        }
+
+        .contato-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contato-icon {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            border: 1px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        .contato-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
+        }
+
+        .contato-value {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .contato-value a {
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .contato-value a:hover {
+            color: var(--gold);
+        }
+
+        .contato-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: var(--gold);
+            color: var(--white);
+            padding: 1.1rem 2.4rem;
+            text-decoration: none;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            transition: all 0.35s;
+        }
+
+        .btn-primary:hover {
+            background: #9E7D43;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(184, 151, 90, 0.25);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            border: 1px solid var(--rose-mid);
+            color: var(--text-mid);
+            padding: 1.1rem 2.4rem;
+            text-decoration: none;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            transition: all 0.35s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .contato-map {
+            background: var(--rose);
+            border: 1px solid var(--rose-mid);
+            height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .map-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(242, 228, 228, 0.8) 0%, rgba(240, 230, 211, 0.6) 100%);
+        }
+
+        .map-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .map-pin {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .map-label {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .map-address {
+            font-size: 0.8rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+        }
+
+        .map-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(184, 151, 90, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(184, 151, 90, 0.06) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: var(--text-dark);
+            padding: 4rem 8vw 2.5rem;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-brand-tagline {
+            font-size: 0.68rem;
+            letter-spacing: 0.16em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.35);
+            line-height: 1.9;
+            max-width: 280px;
+        }
+
+        .footer-col-title {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+
+        .footer-links a {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(184, 151, 90, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.75rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-style: normal;
+        }
+
+        .social-link:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copy {
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.25);
+            letter-spacing: 0.06em;
+        }
+
+        .footer-gold-line {
+            height: 1px;
+            width: 60px;
+            background: linear-gradient(to right, var(--gold), transparent);
+        }
+
+        /* ─── ANIMATIONS ─── */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotateOrb {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .hero-ornament {
+            animation: rotateOrb 20s linear infinite;
+        }
+
+        .hero-left>* {
+            animation: fadeUp 0.9s ease forwards;
+        }
+
+        .hero-eyebrow {
+            animation-delay: 0.1s;
+            opacity: 0;
+        }
+
+        .hero-title {
+            animation-delay: 0.25s;
+            opacity: 0;
+        }
+
+        .hero-subtitle {
+            animation-delay: 0.4s;
+            opacity: 0;
+        }
+
+        .btn-whatsapp {
+            animation-delay: 0.55s;
+            opacity: 0;
+        }
+
+        .hero-metrics {
+            animation-delay: 0.7s;
+            opacity: 0;
+        }
+
+        /* scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 900px) {
+            #hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-right {
+                height: 50vh;
+            }
+
+            .hero-left {
+                padding: 4rem 6vw;
+            }
+
+            #sobre,
+            #beneficios,
+            #contato {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .proc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .aval-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 580px) {
+            .proc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .beneficios-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 5rem 6vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">Dra. Roberta <span>Cruz</span></div>
+        <ul class="nav-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#procedimentos">Procedimentos</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a class="nav-cta" href="https://wa.me/5511940367593?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta!"
+            target="_blank">Agendar</a>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-left">
+            <div class="hero-eyebrow">Clínica Premium · Guarulhos SP</div>
+            <h1 class="hero-title">
+                Estética Avançada<br>com Resultados<br><em>Naturais</em>
+            </h1>
+            <p class="hero-subtitle">
+                Procedimentos modernos realizados com segurança, tecnologia e atendimento humanizado. Realçamos sua
+                beleza natural com excelência e cuidado.
+            </p>
+            <a class="btn-whatsapp"
+                href="https://wa.me/5511940367593?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta!"
+                target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Agendar consulta no WhatsApp
+            </a>
+            <div class="hero-metrics">
+                <div>
+                    <div class="metric-value">5★</div>
+                    <div class="metric-label">Avaliação média</div>
+                </div>
+                <div>
+                    <div class="metric-value">100%</div>
+                    <div class="metric-label">Satisfação</div>
+                </div>
+                <div>
+                    <div class="metric-value">Premium</div>
+                    <div class="metric-label">Atendimento</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-image-placeholder">
+                <div class="hero-ornament"></div>
+                <div class="hero-face-icon">🌸</div>
+                <div class="hero-image-label">Estética · Beleza · Bem-estar</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <div class="sobre-visual reveal">
+            <div class="sobre-card">
+                <div class="sobre-avatar">👩‍⚕️</div>
+                <div class="sobre-badge">✦ Especialista Certificada</div>
+                <div class="sobre-name">Dra. Roberta Cruz</div>
+                <div class="sobre-role">Especialista em Estética Avançada</div>
+                <div class="sobre-stars">★★★★★</div>
+                <div class="sobre-quote">"Meu compromisso é realçar a beleza natural de cada paciente com segurança e
+                    excelência."</div>
+            </div>
+        </div>
+        <div class="sobre-content reveal">
+            <div class="section-label">Sobre a Profissional</div>
+            <h2 class="section-title">Sobre a<br><em>Dra. Roberta Cruz</em></h2>
+            <p class="sobre-text">
+                A Dra. Roberta Cruz é especialista em estética avançada e oferece procedimentos modernos focados em
+                realçar a beleza natural de cada paciente.
+            </p>
+            <p class="sobre-text">
+                A clínica oferece um ambiente seguro, profissional e acolhedor, seguindo padrões de qualidade e higiene
+                rigorosos para garantir a segurança e satisfação de cada cliente.
+            </p>
+            <div class="sobre-credentials">
+                <div class="credential">
+                    <div class="credential-dot"></div>Especialização em harmonização facial e procedimentos estéticos
+                    modernos
+                </div>
+                <div class="credential">
+                    <div class="credential-dot"></div>Clínica localizada em Guarulhos — SP, com fácil acesso
+                </div>
+                <div class="credential">
+                    <div class="credential-dot"></div>Atendimento personalizado e humanizado em cada consulta
+                </div>
+                <div class="credential">
+                    <div class="credential-dot"></div>Técnicas avançadas com materiais de alta qualidade
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCEDIMENTOS -->
+    <section id="procedimentos">
+        <div class="proc-header reveal">
+            <div class="section-label">O que oferecemos</div>
+            <h2 class="section-title">Nossos <em>Procedimentos</em></h2>
+        </div>
+        <div class="proc-grid">
+            <div class="proc-card reveal">
+                <div class="proc-number">01</div>
+                <div class="proc-icon">✦</div>
+                <div class="proc-name">Harmonização Facial</div>
+                <div class="proc-desc">Procedimento completo para equilibrar e valorizar os traços naturais do rosto com
+                    técnicas modernas e seguras.</div>
+            </div>
+            <div class="proc-card reveal">
+                <div class="proc-number">02</div>
+                <div class="proc-icon">◇</div>
+                <div class="proc-name">Botox</div>
+                <div class="proc-desc">Toxina botulínica aplicada por profissional especializada para suavizar linhas de
+                    expressão com resultados naturais.</div>
+            </div>
+            <div class="proc-card reveal">
+                <div class="proc-number">03</div>
+                <div class="proc-icon">◈</div>
+                <div class="proc-name">Preenchimento Facial</div>
+                <div class="proc-desc">Restauração do volume facial e correção de sulcos com ácido hialurônico de alta
+                    qualidade.</div>
+            </div>
+            <div class="proc-card reveal">
+                <div class="proc-number">04</div>
+                <div class="proc-icon">❋</div>
+                <div class="proc-name">Bioestimuladores</div>
+                <div class="proc-desc">Estimulação do colágeno natural da pele para resultados progressivos e duradouros
+                    na qualidade cutânea.</div>
+            </div>
+            <div class="proc-card reveal">
+                <div class="proc-number">05</div>
+                <div class="proc-icon">✿</div>
+                <div class="proc-name">Tratamentos Faciais</div>
+                <div class="proc-desc">Protocolos personalizados para cada tipo de pele, visando hidratação,
+                    luminosidade e saúde cutânea.</div>
+            </div>
+            <div class="proc-card reveal">
+                <div class="proc-number">06</div>
+                <div class="proc-icon">◉</div>
+                <div class="proc-name">Rejuvenescimento</div>
+                <div class="proc-desc">Combinação de técnicas avançadas para reverter os sinais do envelhecimento e
+                    revitalizar a pele.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section id="beneficios">
+        <div class="beneficios-left reveal">
+            <div class="section-label">Por que nos escolher</div>
+            <h2 class="section-title">O que nos<br><em>diferencia</em></h2>
+            <p class="beneficios-text">Na Dra. Roberta Cruz — Estética Avançada, cada detalhe é pensado para
+                proporcionar uma experiência de alto padrão com resultados que falam por si.</p>
+        </div>
+        <div class="beneficios-grid reveal">
+            <div class="beneficio-item">
+                <div class="beneficio-check">✔</div>
+                <div class="beneficio-title">Atendimento Personalizado</div>
+                <div class="beneficio-desc">Cada paciente recebe um plano de tratamento único, pensado para suas
+                    necessidades individuais.</div>
+            </div>
+            <div class="beneficio-item">
+                <div class="beneficio-check">✔</div>
+                <div class="beneficio-title">Ambiente Seguro</div>
+                <div class="beneficio-desc">Clínica com todos os protocolos de biossegurança e higiene para sua total
+                    tranquilidade.</div>
+            </div>
+            <div class="beneficio-item">
+                <div class="beneficio-check">✔</div>
+                <div class="beneficio-title">Técnicas Modernas</div>
+                <div class="beneficio-desc">Procedimentos atualizados com as últimas tecnologias disponíveis no mercado.
+                </div>
+            </div>
+            <div class="beneficio-item">
+                <div class="beneficio-check">✔</div>
+                <div class="beneficio-title">Resultados Naturais</div>
+                <div class="beneficio-desc">Nosso objetivo é realçar sua beleza natural com resultados harmoniosos e
+                    discretos.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section id="avaliacoes">
+        <div class="aval-header reveal">
+            <div class="section-label">Depoimentos</div>
+            <h2 class="section-title">O que dizem<br>nossas <em>pacientes</em></h2>
+        </div>
+        <div class="aval-grid">
+            <div class="aval-card reveal">
+                <span class="aval-quote-mark">"</span>
+                <div class="aval-stars">★★★★★</div>
+                <div class="aval-text">Todos os procedimentos foram feitos com sucesso, amei os resultados. Me sinto
+                    muito mais confiante e bonita!</div>
+                <div class="aval-author">
+                    <div class="aval-avatar">👩</div>
+                    <div>
+                        <div class="aval-name">Paciente Satisfeita</div>
+                        <div class="aval-verified">✦ Avaliação verificada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="aval-card reveal">
+                <span class="aval-quote-mark">"</span>
+                <div class="aval-stars">★★★★★</div>
+                <div class="aval-text">Clínica incrível e profissional maravilhosa! Atendimento de alto nível, ambiente
+                    acolhedor. Recomendo muito!</div>
+                <div class="aval-author">
+                    <div class="aval-avatar">👩‍🦱</div>
+                    <div>
+                        <div class="aval-name">Paciente Satisfeita</div>
+                        <div class="aval-verified">✦ Avaliação verificada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+        <div class="contato-info reveal">
+            <div class="section-label">Fale conosco</div>
+            <h2 class="section-title">Agende sua<br><em>consulta</em></h2>
+            <div style="margin-top: 2.5rem;">
+                <div class="contato-detail">
+                    <div class="contato-icon">📱</div>
+                    <div>
+                        <div class="contato-label">WhatsApp / Telefone</div>
+                        <div class="contato-value">
+                            <a href="https://wa.me/5511940367593" target="_blank">(11) 94036-7593</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contato-detail">
+                    <div class="contato-icon">📍</div>
+                    <div>
+                        <div class="contato-label">Endereço</div>
+                        <div class="contato-value">
+                            Av. Emílio Ribas, 2021<br>1º andar, sala 06<br>Gopouva — Guarulhos, SP
+                        </div>
+                    </div>
+                </div>
+                <div class="contato-detail">
+                    <div class="contato-icon">🕐</div>
+                    <div>
+                        <div class="contato-label">Atendimento</div>
+                        <div class="contato-value">Seg–Sex: 9h–18h · Sáb: 9h–13h</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contato-actions">
+                <a class="btn-primary"
+                    href="https://wa.me/5511940367593?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta!"
+                    target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    Agendar no WhatsApp
+                </a>
+                <a class="btn-secondary" href="https://maps.google.com/?q=Av.+Emílio+Ribas,+2021+Guarulhos+SP"
+                    target="_blank">
+                    📍 Abrir localização no Google Maps
+                </a>
+            </div>
+        </div>
+        <div class="contato-map reveal">
+            <div class="map-grid"></div>
+            <div class="map-overlay"></div>
+            <div class="map-content">
+                <div class="map-pin">📍</div>
+                <div class="map-label">Dra. Roberta Cruz</div>
+                <div class="map-address">
+                    Av. Emílio Ribas, 2021<br>
+                    1º andar, sala 06<br>
+                    Gopouva · Guarulhos SP
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div>
+                <div class="footer-brand-name">Dra. Roberta Cruz</div>
+                <div class="footer-brand-tagline">Estética Avançada</div>
+                <div class="footer-desc">Procedimentos modernos com segurança, tecnologia e atendimento humanizado.
+                    Realçamos sua beleza natural.</div>
+                <div class="footer-social" style="margin-top:1.5rem">
+                    <a href="https://instagram.com" target="_blank" class="social-link" title="Instagram">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Navegação</div>
+                <ul class="footer-links">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#procedimentos">Procedimentos</a></li>
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#avaliacoes">Avaliações</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Contato</div>
+                <ul class="footer-links">
+                    <li><a href="https://wa.me/5511940367593" target="_blank">(11) 94036-7593</a></li>
+                    <li><a href="#">@drarobertacruz</a></li>
+                    <li><a href="#">Av. Emílio Ribas, 2021</a></li>
+                    <li><a href="#">Guarulhos, SP</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">© 2025 Dra. Roberta Cruz — Estética Avançada. Todos os direitos reservados.</div>
+            <div class="footer-gold-line"></div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach((e, i) => {
+                if (e.isIntersecting) {
+                    setTimeout(() => e.target.classList.add('visible'), i * 80);
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        reveals.forEach(el => obs.observe(el));
+
+        // Smooth nav highlight
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+            });
+            navLinks.forEach(a => {
+                a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+            });
+        });
+    </script>
+</body>
+
+</html>
